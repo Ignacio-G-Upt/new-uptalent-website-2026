@@ -1,0 +1,50 @@
+---
+const env = import.meta.env;
+
+const hasKey = Boolean(env.NEBIUS_API_KEY && String(env.NEBIUS_API_KEY).trim());
+const hasBrand = Boolean(env.BRAND_ID && String(env.BRAND_ID).trim());
+const hasAssets = Boolean(env.ASSETS_BASE_URL && String(env.ASSETS_BASE_URL).trim());
+const hasSite = Boolean(env.SITE_URL && String(env.SITE_URL).trim());
+
+let nebius = { reachable: false, auth: false };
+
+if (hasKey) {
+  try {
+    const res = await fetch('https://studio.nebius.com/project/api-keys', {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${env.NEBIUS_API_KEY}`,
+        Accept: 'application/json',
+        'User-Agent': 'uptalent-astro-ci/1.0',
+      },
+    });
+    nebius.reachable = true;
+    nebius.auth = res.status >= 200 && res.status < 300;
+  } catch (e) {
+    nebius.reachable = false;
+    nebius.auth = false;
+  }
+}
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Health</title>
+  </head>
+  <body>
+    <h1>Project health</h1>
+    <ul>
+      <li>NEBIUS_API_KEY: {hasKey ? 'present' : 'missing'}</li>
+      <li>BRAND_ID: {hasBrand ? 'present' : 'missing'}</li>
+      <li>ASSETS_BASE_URL: {hasAssets ? 'present' : 'missing'}</li>
+      <li>SITE_URL: {hasSite ? 'present' : 'missing'}</li>
+      <li>Nebius reachable: {nebius.reachable ? 'yes' : 'no'}</li>
+      <li>Nebius auth OK: {nebius.auth ? 'yes' : 'no'}</li>
+    </ul>
+  </body>
+  
+</html>
+
+
