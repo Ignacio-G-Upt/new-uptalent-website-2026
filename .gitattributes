@@ -1,0 +1,5 @@
+assets/approved/**/*.webm filter=lfs diff=lfs merge=lfs -text
+assets/approved/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+assets/approved/**/*.lottie.json filter=lfs diff=lfs merge=lfs -text
+assets/approved/**/*.{avif,webp} filter=lfs diff=lfs merge=lfs -text
+

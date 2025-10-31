@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import { resolveDescription, resolvePageTitle } from '../config/seo';
+
+interface Props {
+  entry: CollectionEntry<'pages'>;
+}
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+  return pages
+    .filter((page) => page.slug !== 'home')
+    .map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props as Props;
+const { Content } = await entry.render();
+const data = entry.data;
+const pageTitle = resolvePageTitle(data.title ?? data.h1);
+const pageDescription = resolveDescription(data.description);
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <article>
+    <header class="page-hero">
+      {data.navLabel && <p class="page-eyebrow">{data.navLabel}</p>}
+      {data.h1 && <h1>{data.h1}</h1>}
+      {data.description && <p class="page-intro">{data.description}</p>}
+    </header>
+    <Content />
+  </article>
+</Layout>
+
+<style>
+  .page-hero {
+    display: grid;
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .page-eyebrow {
+    font-size: 0.875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .page-intro {
+    font-size: 1.125rem;
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+
+  article :where(h2) {
+    font-size: 1.75rem;
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-md);
+  }
+
+  article :where(p) {
+    margin-bottom: var(--space-md);
+  }
+
+  article :where(ul) {
+    padding-left: 1.2rem;
+  }
+</style>

@@ -1,13 +1,3 @@
-export function resolvePageTitle(input?: string): string {
-  const base = 'Uptalent 2026';
-  if (!input || !input.trim()) return base;
-  return `${input.trim()} — ${base}`;
-}
-
-export function resolveDescription(input?: string): string {
-  const fallback = 'Uptalent site initialization in progress.';
-  return input?.trim() || fallback;
-}
 export const siteMetadata = {
   name: 'Uptalent 2026',
   titleTemplate: '%s · Uptalent 2026',
