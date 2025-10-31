@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "tokens:gen": "node scripts/generate-tokens.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.2",

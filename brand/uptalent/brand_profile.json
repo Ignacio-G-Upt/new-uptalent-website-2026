@@ -1,25 +1,6 @@
 {
   "brand_id": "uptalent",
   "consent": false,
-  "adapter_id": null,
-  "logo_paths": [],
-  "palette_hex": [],
-  "fonts": {
-    "sans": "Inter",
-    "serif": "Georgia",
-    "mono": "Roboto Mono"
-  },
-  "tone_tokens": {},
-  "spacing": {
-    "scale": ["2xs","xs","sm","md","lg","xl","2xl"]
-  },
-  "metadata": {
-    "created_at": ""
-  }
-}
-{
-  "brand_id": "uptalent",
-  "consent": false,
   "palette": {
     "primary": "#2563EB",
     "primaryDark": "#1D4ED8",
@@ -27,16 +8,16 @@
     "neutral": ["#0F172A", "#475569", "#CBD5F5", "#F8FAFC"]
   },
   "fonts": {
-    "heading": "Inter",
-    "body": "Inter"
+    "sans": "Inter",
+    "serif": "Georgia",
+    "mono": "Roboto Mono"
   },
   "tone": {
     "voice": "Confident, collaborative, product-minded",
     "keywords": ["global", "talent-first", "deliberate", "responsible"]
   },
   "spacing": {
-    "base": 4,
-    "scale": 1.25
+    "scale": ["2xs","xs","sm","md","lg","xl","2xl"]
   },
   "borderRadius": {
     "small": 8,

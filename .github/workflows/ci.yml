@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Generate brand tokens
+        run: node scripts/generate-tokens.mjs
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
