@@ -23,6 +23,8 @@ jobs:
         run: npm run build
       - name: Asset contract
         run: node scripts/validate-assets.mjs
+      - name: Cost policy
+        run: node scripts/policy-check.mjs
       - name: Visual validator (stub)
         run: echo "visual-validator gate pending Nebius integration"
       - name: Accessibility check (stub)
