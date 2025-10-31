@@ -21,6 +21,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Env audit (Nebius/Vercel)
+        run: node scripts/nebius-env-audit.mjs
       - name: Asset contract
         run: node scripts/validate-assets.mjs
       - name: Cost policy
