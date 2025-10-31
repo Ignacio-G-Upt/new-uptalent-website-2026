@@ -1,0 +1,1 @@
+export { SizeSmallHierarchyWrapper } from "./SizeSmallHierarchyWrapper";

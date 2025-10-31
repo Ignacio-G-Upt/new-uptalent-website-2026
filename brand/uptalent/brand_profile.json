@@ -1,0 +1,62 @@
+{
+  "brand_id": "uptalent",
+  "consent": false,
+  "adapter_id": null,
+  "logo_paths": [],
+  "palette_hex": [],
+  "fonts": {
+    "sans": "Inter",
+    "serif": "Georgia",
+    "mono": "Roboto Mono"
+  },
+  "tone_tokens": {},
+  "spacing": {
+    "scale": ["2xs","xs","sm","md","lg","xl","2xl"]
+  },
+  "metadata": {
+    "created_at": ""
+  }
+}
+{
+  "brand_id": "uptalent",
+  "consent": false,
+  "palette": {
+    "primary": "#2563EB",
+    "primaryDark": "#1D4ED8",
+    "secondary": "#F97316",
+    "neutral": ["#0F172A", "#475569", "#CBD5F5", "#F8FAFC"]
+  },
+  "fonts": {
+    "heading": "Inter",
+    "body": "Inter"
+  },
+  "tone": {
+    "voice": "Confident, collaborative, product-minded",
+    "keywords": ["global", "talent-first", "deliberate", "responsible"]
+  },
+  "spacing": {
+    "base": 4,
+    "scale": 1.25
+  },
+  "borderRadius": {
+    "small": 8,
+    "medium": 16,
+    "large": 24
+  },
+  "shadows": {
+    "card": "0 20px 40px -24px rgba(15, 23, 42, 0.4)",
+    "tooltip": "0 8px 20px -16px rgba(15, 23, 42, 0.5)"
+  },
+  "logo": {
+    "primary": null,
+    "monochrome": null,
+    "wordmark": null
+  },
+  "adapter": {
+    "adapter_id": null,
+    "version": null,
+    "trainedAt": null
+  },
+  "notes": "Placeholder profile. Populate with authoritative data once Figma/Anima extraction is complete."
+}
+

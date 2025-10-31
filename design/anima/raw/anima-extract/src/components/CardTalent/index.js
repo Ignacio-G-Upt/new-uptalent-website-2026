@@ -1,0 +1,1 @@
+export { CardTalent } from "./CardTalent";

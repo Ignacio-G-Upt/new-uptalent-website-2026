@@ -1,0 +1,1 @@
+export { NavbarHireTalent } from "./NavbarHireTalent";

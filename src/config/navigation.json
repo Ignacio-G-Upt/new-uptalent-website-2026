@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "label": "Home", "href": "/", "kind": "link", "order": 1 },
+    { "label": "Engineers", "href": "/engineers/", "kind": "link", "order": 2 },
+    { "label": "Architects", "href": "/architects/", "kind": "link", "order": 3 }
+  ],
+  "logoSrc": "/favicon.svg",
+  "cta": { "label": "Book a Call", "href": "/contact" }
+}
+

@@ -1,11 +1,57 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Uptalent 2026 new website — initialization"
+  description="Setup placeholder while core systems are configured"
+>
+  <section class="status">
+    <h1>Initialization in progress</h1>
+    <p>
+      Astro scaffolding, MDX support, and content collections are configured. Page content and
+      visual sections will be added only after the owner provides the approved `.md` files and the
+      initialization checklist is complete.
+    </p>
+    <ul>
+      <li><strong>Content source:</strong> awaiting `src/content/pages/*.mdx` from owner.</li>
+      <li>
+        <strong>Next steps:</strong> finalize shared components, configure external services, then
+        request copy per page.
+      </li>
+    </ul>
+  </section>
 </Layout>
+
+<style>
+  .status {
+    display: grid;
+    gap: var(--space-md);
+    padding: var(--space-xl) var(--space-lg);
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+  }
+
+  p {
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    display: grid;
+    gap: var(--space-xs);
+  }
+
+  strong {
+    color: var(--color-text);
+  }
+</style>

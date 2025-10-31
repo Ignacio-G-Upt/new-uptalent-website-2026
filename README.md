@@ -1,46 +1,67 @@
-# Astro Starter Kit: Basics
+# Uptalent 2026 New Website (Astro)
 
-```sh
-npm create astro@latest -- --template basics
-```
+This repository hosts the 2026 Uptalent marketing website, built with Astro and structured for
+section-by-section approvals. Initialization covers tooling, MDX/content collections, brand asset
+ingest, and shared tokens before any page content is integrated.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Project status
 
-## 🚀 Project Structure
+- ✅ Astro project scaffolded with MDX integration and content collections.
+- ✅ Design assets from Anima organized under `design/anima/raw`.
+- ⏳ Waiting for owner-provided `.md` copy files (e.g., `homepage.md`, `engineers.md`).
+- ⏳ Shared components, Nebius adapters, CI, and deployment wiring are still pending.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Workspace layout
 
 ```text
 /
+├── design/
+│   └── anima/
+│       └── raw/             # Uploaded Anima exports (no code changes)
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+├── src/
+│   ├── assets/
+│   ├── content/
+│   │   ├── config.ts        # Astro content collections (pages)
+│   │   └── pages/README.md  # Placeholder awaiting owner MDX files
+│   ├── layouts/
+│   │   └── Layout.astro     # Base layout with tokens + skip link
+│   ├── pages/
+│   │   └── index.astro      # Initialization status page
+│   └── styles/tokens.css    # Temporary design tokens (replace with brand profile)
+├── .env.example
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Environment variables
 
-## 🧞 Commands
+Copy `.env.example` to `.env` and populate once credentials are provisioned:
 
-All commands are run from the root of the project, from a terminal:
+- `NEBIUS_API_KEY`
+- `BRAND_ID`
+- `ASSETS_BASE_URL`
+- `SITE_URL`
+- `VERCEL_PROJECT_ID`
+- `VERCEL_ORG_ID`
+- `VERCEL_TOKEN`
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+_Note:_ Do not commit populated `.env` files.
 
-## 👀 Want to learn more?
+## Commands
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Command       | Description                                |
+|:--------------|:-------------------------------------------|
+| `npm install` | Install dependencies                       |
+| `npm run dev` | Start local development server (4321)      |
+| `npm run build` | Build the production bundle to `dist/`   |
+| `npm run preview` | Preview the production build locally   |
+| `npm run astro -- --help` | Astro CLI help                 |
+
+## Next steps
+
+1. Configure Nebius project, Vercel, CI workflows, and brand profile per project plan.
+2. Implement shared component library driven by `src/styles/tokens.css`.
+3. Request owner MDX content files once initialization is confirmed.
+4. Follow section-by-section approval workflow for each page.

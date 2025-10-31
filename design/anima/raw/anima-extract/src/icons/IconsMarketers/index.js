@@ -1,0 +1,1 @@
+export { IconsMarketers } from "./IconsMarketers";

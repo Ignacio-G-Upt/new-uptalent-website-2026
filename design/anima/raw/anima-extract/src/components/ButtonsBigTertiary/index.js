@@ -1,0 +1,1 @@
+export { ButtonsBigTertiary } from "./ButtonsBigTertiary";

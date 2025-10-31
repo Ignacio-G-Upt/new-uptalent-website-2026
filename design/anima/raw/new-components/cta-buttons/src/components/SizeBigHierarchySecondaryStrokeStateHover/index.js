@@ -1,0 +1,1 @@
+export { SizeBigHierarchySecondaryStrokeStateHover } from "./SizeBigHierarchySecondaryStrokeStateHover";

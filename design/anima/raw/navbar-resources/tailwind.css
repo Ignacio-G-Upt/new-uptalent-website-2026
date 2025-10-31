@@ -1,0 +1,506 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --bg: rgba(242, 242, 242, 1);
+  --black: rgba(0, 0, 0, 1);
+  --black-20: rgba(34, 34, 34, 0.2);
+  --dark-navy: rgba(0, 4, 53, 1);
+  --dark-navy-10: rgba(0, 4, 53, 0.1);
+  --dark-navy-20: rgba(0, 4, 53, 0.2);
+  --grey: rgba(228, 226, 223, 1);
+  --h1-font-family: "ID Grotesk", Helvetica;
+  --h1-font-size: 48px;
+  --h1-font-style: normal;
+  --h1-font-weight: 500;
+  --h1-letter-spacing: 0px;
+  --h1-line-height: 110.00000238418579%;
+  --h2-font-family: "ID Grotesk", Helvetica;
+  --h2-font-size: 44px;
+  --h2-font-style: normal;
+  --h2-font-weight: 500;
+  --h2-letter-spacing: 0px;
+  --h2-line-height: 120.00000476837158%;
+  --h3-font-family: "ID Grotesk", Helvetica;
+  --h3-font-size: 32px;
+  --h3-font-style: normal;
+  --h3-font-weight: 400;
+  --h3-letter-spacing: 0px;
+  --h3-line-height: 120.00000476837158%;
+  --h4-font-family: "ID Grotesk", Helvetica;
+  --h4-font-size: 28px;
+  --h4-font-style: normal;
+  --h4-font-weight: 500;
+  --h4-letter-spacing: 0px;
+  --h4-line-height: 120.00000476837158%;
+  --h5-font-family: "ID Grotesk", Helvetica;
+  --h5-font-size: 24px;
+  --h5-font-style: normal;
+  --h5-font-weight: 400;
+  --h5-letter-spacing: 0px;
+  --h5-line-height: 120.00000476837158%;
+  --h6-font-family: "ID Grotesk", Helvetica;
+  --h6-font-size: 20px;
+  --h6-font-style: normal;
+  --h6-font-weight: 400;
+  --h6-letter-spacing: 0px;
+  --h6-line-height: 120.00000476837158%;
+  --heading-desktop-h1-font-family: "Inter", Helvetica;
+  --heading-desktop-h1-font-size: 56px;
+  --heading-desktop-h1-font-style: normal;
+  --heading-desktop-h1-font-weight: 700;
+  --heading-desktop-h1-letter-spacing: 0px;
+  --heading-desktop-h1-line-height: 120.00000476837158%;
+  --heading-desktop-h2-font-family: "Roboto", Helvetica;
+  --heading-desktop-h2-font-size: 48px;
+  --heading-desktop-h2-font-style: normal;
+  --heading-desktop-h2-font-weight: 700;
+  --heading-desktop-h2-letter-spacing: 0px;
+  --heading-desktop-h2-line-height: 120.00000476837158%;
+  --heading-desktop-h3-font-family: "Roboto", Helvetica;
+  --heading-desktop-h3-font-size: 40px;
+  --heading-desktop-h3-font-style: normal;
+  --heading-desktop-h3-font-weight: 700;
+  --heading-desktop-h3-letter-spacing: 0px;
+  --heading-desktop-h3-line-height: 120.00000476837158%;
+  --heading-desktop-h4-font-family: "Roboto", Helvetica;
+  --heading-desktop-h4-font-size: 32px;
+  --heading-desktop-h4-font-style: normal;
+  --heading-desktop-h4-font-weight: 700;
+  --heading-desktop-h4-letter-spacing: 0px;
+  --heading-desktop-h4-line-height: 129.99999523162842%;
+  --heading-desktop-h5-font-family: "Roboto", Helvetica;
+  --heading-desktop-h5-font-size: 24px;
+  --heading-desktop-h5-font-style: normal;
+  --heading-desktop-h5-font-weight: 700;
+  --heading-desktop-h5-letter-spacing: 0px;
+  --heading-desktop-h5-line-height: 139.9999976158142%;
+  --heading-desktop-h6-font-family: "Roboto", Helvetica;
+  --heading-desktop-h6-font-size: 20px;
+  --heading-desktop-h6-font-style: normal;
+  --heading-desktop-h6-font-weight: 700;
+  --heading-desktop-h6-letter-spacing: 0px;
+  --heading-desktop-h6-line-height: 139.9999976158142%;
+  --heading-desktop-tagline-font-family: "Roboto", Helvetica;
+  --heading-desktop-tagline-font-size: 16px;
+  --heading-desktop-tagline-font-style: normal;
+  --heading-desktop-tagline-font-weight: 600;
+  --heading-desktop-tagline-letter-spacing: 0px;
+  --heading-desktop-tagline-line-height: 150%;
+  --heading-mobile-h1-font-family: "Roboto", Helvetica;
+  --heading-mobile-h1-font-size: 40px;
+  --heading-mobile-h1-font-style: normal;
+  --heading-mobile-h1-font-weight: 700;
+  --heading-mobile-h1-letter-spacing: 0px;
+  --heading-mobile-h1-line-height: 120.00000476837158%;
+  --heading-mobile-h2-font-family: "Roboto", Helvetica;
+  --heading-mobile-h2-font-size: 36px;
+  --heading-mobile-h2-font-style: normal;
+  --heading-mobile-h2-font-weight: 700;
+  --heading-mobile-h2-letter-spacing: 0px;
+  --heading-mobile-h2-line-height: 120.00000476837158%;
+  --heading-mobile-h3-font-family: "Roboto", Helvetica;
+  --heading-mobile-h3-font-size: 32px;
+  --heading-mobile-h3-font-style: normal;
+  --heading-mobile-h3-font-weight: 700;
+  --heading-mobile-h3-letter-spacing: 0px;
+  --heading-mobile-h3-line-height: 120.00000476837158%;
+  --heading-mobile-h4-font-family: "Roboto", Helvetica;
+  --heading-mobile-h4-font-size: 24px;
+  --heading-mobile-h4-font-style: normal;
+  --heading-mobile-h4-font-weight: 700;
+  --heading-mobile-h4-letter-spacing: 0px;
+  --heading-mobile-h4-line-height: 139.9999976158142%;
+  --heading-mobile-h5-font-family: "Roboto", Helvetica;
+  --heading-mobile-h5-font-size: 20px;
+  --heading-mobile-h5-font-style: normal;
+  --heading-mobile-h5-font-weight: 700;
+  --heading-mobile-h5-letter-spacing: 0px;
+  --heading-mobile-h5-line-height: 139.9999976158142%;
+  --heading-mobile-h6-font-family: "Roboto", Helvetica;
+  --heading-mobile-h6-font-size: 18px;
+  --heading-mobile-h6-font-style: normal;
+  --heading-mobile-h6-font-weight: 700;
+  --heading-mobile-h6-letter-spacing: 0px;
+  --heading-mobile-h6-line-height: 139.9999976158142%;
+  --large: 0px 8px 8px -4px rgba(0, 0, 0, 0.03), 0px 20px 24px -4px
+    rgba(0, 0, 0, 0.08);
+  --light-grey: rgba(244, 244, 244, 1);
+  --medium: 0px 4px 6px -2px rgba(0, 0, 0, 0.03), 0px 12px 16px -4px
+    rgba(0, 0, 0, 0.08);
+  --shadow-2xl: 0px 24px 48px -12px rgba(34, 34, 36, 0.18);
+  --shadow-3xl: 0px 32px 64px -12px rgba(34, 34, 36, 0.14);
+  --shadow-icon: 0px 8px 16px 0px rgba(216, 87, 80, 0.25);
+  --shadow-lg: 0px 4px 6px -2px rgba(34, 34, 36, 0.03), 0px 12px 16px -4px
+    rgba(34, 34, 36, 0.08);
+  --shadow-md: 0px 2px 4px -2px rgba(10, 13, 18, 0.06), 0px 4px 8px -2px
+    rgba(34, 34, 36, 0.1);
+  --shadow-sm: 0px 1px 2px 0px rgba(34, 34, 36, 0.06), 0px 1px 3px 0px
+    rgba(34, 34, 36, 0.1);
+  --shadow-xl: 0px 8px 8px -4px rgba(120, 120, 133, 0.01), 0px 20px 24px -4px
+    rgba(120, 120, 133, 0.05);
+  --shadow-xs: 0px 1px 2px 0px rgba(34, 34, 36, 0.05);
+  --small: 0px 2px 4px -2px rgba(0, 0, 0, 0.06), 0px 4px 8px -2px
+    rgba(0, 0, 0, 0.1);
+  --text: rgba(0, 4, 53, 1);
+  --text-button-font-family: "Inter", Helvetica;
+  --text-button-font-size: 18px;
+  --text-button-font-style: normal;
+  --text-button-font-weight: 500;
+  --text-button-letter-spacing: 0px;
+  --text-button-line-height: 150%;
+  --text-large-bold-font-family: "Inter", Helvetica;
+  --text-large-bold-font-size: 20px;
+  --text-large-bold-font-style: normal;
+  --text-large-bold-font-weight: 700;
+  --text-large-bold-letter-spacing: 0px;
+  --text-large-bold-line-height: 150%;
+  --text-large-extra-bold-font-family: "Inter", Helvetica;
+  --text-large-extra-bold-font-size: 20px;
+  --text-large-extra-bold-font-style: normal;
+  --text-large-extra-bold-font-weight: 700;
+  --text-large-extra-bold-letter-spacing: 0px;
+  --text-large-extra-bold-line-height: 150%;
+  --text-large-font-family: "Inter", Helvetica;
+  --text-large-font-size: 20px;
+  --text-large-font-style: normal;
+  --text-large-font-weight: 400;
+  --text-large-letter-spacing: 0px;
+  --text-large-light-font-family: "Inter", Helvetica;
+  --text-large-light-font-size: 20px;
+  --text-large-light-font-style: normal;
+  --text-large-light-font-weight: 400;
+  --text-large-light-letter-spacing: 0px;
+  --text-large-light-line-height: 150%;
+  --text-large-line-height: 150%;
+  --text-large-link-font-family: "Inter", Helvetica;
+  --text-large-link-font-size: 20px;
+  --text-large-link-font-style: normal;
+  --text-large-link-font-weight: 400;
+  --text-large-link-letter-spacing: 0px;
+  --text-large-link-line-height: 150%;
+  --text-large-medium-font-family: "Inter", Helvetica;
+  --text-large-medium-font-size: 20px;
+  --text-large-medium-font-style: normal;
+  --text-large-medium-font-weight: 500;
+  --text-large-medium-letter-spacing: 0px;
+  --text-large-medium-line-height: 150%;
+  --text-large-normal-font-family: "Inter", Helvetica;
+  --text-large-normal-font-size: 20px;
+  --text-large-normal-font-style: normal;
+  --text-large-normal-font-weight: 400;
+  --text-large-normal-letter-spacing: 0px;
+  --text-large-normal-line-height: 150%;
+  --text-large-semi-bold-font-family: "Inter", Helvetica;
+  --text-large-semi-bold-font-size: 20px;
+  --text-large-semi-bold-font-style: normal;
+  --text-large-semi-bold-font-weight: 600;
+  --text-large-semi-bold-letter-spacing: 0px;
+  --text-large-semi-bold-line-height: 150%;
+  --text-medium-bold-font-family: "Roboto", Helvetica;
+  --text-medium-bold-font-size: 18px;
+  --text-medium-bold-font-style: normal;
+  --text-medium-bold-font-weight: 700;
+  --text-medium-bold-letter-spacing: 0px;
+  --text-medium-bold-line-height: 150%;
+  --text-medium-extra-bold-font-family: "Roboto", Helvetica;
+  --text-medium-extra-bold-font-size: 18px;
+  --text-medium-extra-bold-font-style: normal;
+  --text-medium-extra-bold-font-weight: 700;
+  --text-medium-extra-bold-letter-spacing: 0px;
+  --text-medium-extra-bold-line-height: 150%;
+  --text-medium-font-family: "Inter", Helvetica;
+  --text-medium-font-size: 18px;
+  --text-medium-font-style: normal;
+  --text-medium-font-weight: 400;
+  --text-medium-letter-spacing: 0px;
+  --text-medium-light-font-family: "Roboto", Helvetica;
+  --text-medium-light-font-size: 18px;
+  --text-medium-light-font-style: normal;
+  --text-medium-light-font-weight: 300;
+  --text-medium-light-letter-spacing: 0px;
+  --text-medium-light-line-height: 150%;
+  --text-medium-line-height: 150%;
+  --text-medium-link-font-family: "Roboto", Helvetica;
+  --text-medium-link-font-size: 18px;
+  --text-medium-link-font-style: normal;
+  --text-medium-link-font-weight: 400;
+  --text-medium-link-letter-spacing: 0px;
+  --text-medium-link-line-height: 150%;
+  --text-medium-medium-font-family: "Inter", Helvetica;
+  --text-medium-medium-font-size: 18px;
+  --text-medium-medium-font-style: normal;
+  --text-medium-medium-font-weight: 500;
+  --text-medium-medium-letter-spacing: 0px;
+  --text-medium-medium-line-height: 150%;
+  --text-medium-normal-font-family: "Inter", Helvetica;
+  --text-medium-normal-font-size: 18px;
+  --text-medium-normal-font-style: normal;
+  --text-medium-normal-font-weight: 400;
+  --text-medium-normal-letter-spacing: 0px;
+  --text-medium-normal-line-height: 150%;
+  --text-medium-semi-bold-font-family: "Roboto", Helvetica;
+  --text-medium-semi-bold-font-size: 18px;
+  --text-medium-semi-bold-font-style: normal;
+  --text-medium-semi-bold-font-weight: 600;
+  --text-medium-semi-bold-letter-spacing: 0px;
+  --text-medium-semi-bold-line-height: 150%;
+  --text-p: rgba(0, 4, 53, 0.8);
+  --text-regular-bold-font-family: "Roboto", Helvetica;
+  --text-regular-bold-font-size: 16px;
+  --text-regular-bold-font-style: normal;
+  --text-regular-bold-font-weight: 700;
+  --text-regular-bold-letter-spacing: 0px;
+  --text-regular-bold-line-height: 150%;
+  --text-regular-extra-bold-font-family: "Roboto", Helvetica;
+  --text-regular-extra-bold-font-size: 16px;
+  --text-regular-extra-bold-font-style: normal;
+  --text-regular-extra-bold-font-weight: 800;
+  --text-regular-extra-bold-letter-spacing: 0px;
+  --text-regular-extra-bold-line-height: 150%;
+  --text-regular-font-family: "Inter", Helvetica;
+  --text-regular-font-size: 16px;
+  --text-regular-font-style: normal;
+  --text-regular-font-weight: 400;
+  --text-regular-letter-spacing: 0px;
+  --text-regular-light-font-family: "Roboto", Helvetica;
+  --text-regular-light-font-size: 16px;
+  --text-regular-light-font-style: normal;
+  --text-regular-light-font-weight: 300;
+  --text-regular-light-letter-spacing: 0px;
+  --text-regular-light-line-height: 150%;
+  --text-regular-line-height: 150%;
+  --text-regular-link-font-family: "Roboto", Helvetica;
+  --text-regular-link-font-size: 16px;
+  --text-regular-link-font-style: normal;
+  --text-regular-link-font-weight: 400;
+  --text-regular-link-letter-spacing: 0px;
+  --text-regular-link-line-height: 150%;
+  --text-regular-medium-font-family: "Inter", Helvetica;
+  --text-regular-medium-font-size: 16px;
+  --text-regular-medium-font-style: normal;
+  --text-regular-medium-font-weight: 500;
+  --text-regular-medium-letter-spacing: 0px;
+  --text-regular-medium-line-height: 150%;
+  --text-regular-normal-font-family: "Inter", Helvetica;
+  --text-regular-normal-font-size: 16px;
+  --text-regular-normal-font-style: normal;
+  --text-regular-normal-font-weight: 400;
+  --text-regular-normal-letter-spacing: 0px;
+  --text-regular-normal-line-height: 150%;
+  --text-regular-semi-bold-font-family: "Manrope", Helvetica;
+  --text-regular-semi-bold-font-size: 16px;
+  --text-regular-semi-bold-font-style: normal;
+  --text-regular-semi-bold-font-weight: 600;
+  --text-regular-semi-bold-letter-spacing: 0px;
+  --text-regular-semi-bold-line-height: 150%;
+  --text-small-bold-font-family: "Roboto", Helvetica;
+  --text-small-bold-font-size: 14px;
+  --text-small-bold-font-style: normal;
+  --text-small-bold-font-weight: 700;
+  --text-small-bold-letter-spacing: 0px;
+  --text-small-bold-line-height: 150%;
+  --text-small-extra-bold-font-family: "Roboto", Helvetica;
+  --text-small-extra-bold-font-size: 14px;
+  --text-small-extra-bold-font-style: normal;
+  --text-small-extra-bold-font-weight: 800;
+  --text-small-extra-bold-letter-spacing: 0px;
+  --text-small-extra-bold-line-height: 150%;
+  --text-small-font-family: "Inter", Helvetica;
+  --text-small-font-size: 14px;
+  --text-small-font-style: normal;
+  --text-small-font-weight: 400;
+  --text-small-letter-spacing: 0px;
+  --text-small-light-font-family: "Roboto", Helvetica;
+  --text-small-light-font-size: 14px;
+  --text-small-light-font-style: normal;
+  --text-small-light-font-weight: 300;
+  --text-small-light-letter-spacing: 0px;
+  --text-small-light-line-height: 150%;
+  --text-small-line-height: 129.99999523162842%;
+  --text-small-link-font-family: "Inter", Helvetica;
+  --text-small-link-font-size: 14px;
+  --text-small-link-font-style: normal;
+  --text-small-link-font-weight: 400;
+  --text-small-link-letter-spacing: 0px;
+  --text-small-link-line-height: 150%;
+  --text-small-medium-font-family: "Roboto", Helvetica;
+  --text-small-medium-font-size: 14px;
+  --text-small-medium-font-style: normal;
+  --text-small-medium-font-weight: 500;
+  --text-small-medium-letter-spacing: 0px;
+  --text-small-medium-line-height: 150%;
+  --text-small-normal-font-family: "Inter", Helvetica;
+  --text-small-normal-font-size: 14px;
+  --text-small-normal-font-style: normal;
+  --text-small-normal-font-weight: 400;
+  --text-small-normal-letter-spacing: 0px;
+  --text-small-normal-line-height: 150%;
+  --text-small-semi-bold-font-family: "Inter", Helvetica;
+  --text-small-semi-bold-font-size: 14px;
+  --text-small-semi-bold-font-style: normal;
+  --text-small-semi-bold-font-weight: 600;
+  --text-small-semi-bold-letter-spacing: 0px;
+  --text-small-semi-bold-line-height: 150%;
+  --text-tiny-bold-font-family: "Roboto", Helvetica;
+  --text-tiny-bold-font-size: 12px;
+  --text-tiny-bold-font-style: normal;
+  --text-tiny-bold-font-weight: 700;
+  --text-tiny-bold-letter-spacing: 0px;
+  --text-tiny-bold-line-height: 150%;
+  --text-tiny-extra-bold-font-family: "Roboto", Helvetica;
+  --text-tiny-extra-bold-font-size: 12px;
+  --text-tiny-extra-bold-font-style: normal;
+  --text-tiny-extra-bold-font-weight: 800;
+  --text-tiny-extra-bold-letter-spacing: 0px;
+  --text-tiny-extra-bold-line-height: 150%;
+  --text-tiny-light-font-family: "Roboto", Helvetica;
+  --text-tiny-light-font-size: 12px;
+  --text-tiny-light-font-style: normal;
+  --text-tiny-light-font-weight: 300;
+  --text-tiny-light-letter-spacing: 0px;
+  --text-tiny-light-line-height: 150%;
+  --text-tiny-link-font-family: "Roboto", Helvetica;
+  --text-tiny-link-font-size: 12px;
+  --text-tiny-link-font-style: normal;
+  --text-tiny-link-font-weight: 400;
+  --text-tiny-link-letter-spacing: 0px;
+  --text-tiny-link-line-height: 150%;
+  --text-tiny-medium-font-family: "Roboto", Helvetica;
+  --text-tiny-medium-font-size: 12px;
+  --text-tiny-medium-font-style: normal;
+  --text-tiny-medium-font-weight: 500;
+  --text-tiny-medium-letter-spacing: 0px;
+  --text-tiny-medium-line-height: 150%;
+  --text-tiny-normal-font-family: "Roboto", Helvetica;
+  --text-tiny-normal-font-size: 12px;
+  --text-tiny-normal-font-style: normal;
+  --text-tiny-normal-font-weight: 400;
+  --text-tiny-normal-letter-spacing: 0px;
+  --text-tiny-normal-line-height: 150%;
+  --text-tiny-semi-bold-font-family: "Roboto", Helvetica;
+  --text-tiny-semi-bold-font-size: 12px;
+  --text-tiny-semi-bold-font-style: normal;
+  --text-tiny-semi-bold-font-weight: 600;
+  --text-tiny-semi-bold-letter-spacing: 0px;
+  --text-tiny-semi-bold-line-height: 150%;
+  --white: rgba(255, 255, 255, 1);
+  --xlarge: 0px 24px 48px -12px rgba(0, 0, 0, 0.18);
+  --xsmall: 0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px
+    rgba(0, 0, 0, 0.1);
+  --xxlarge: 0px 32px 64px -12px rgba(0, 0, 0, 0.14);
+  --xxsmall: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}

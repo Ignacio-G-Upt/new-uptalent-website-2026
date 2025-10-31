@@ -1,22 +1,59 @@
+---
+import '../styles/tokens.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const {
+  title = 'Uptalent 2026 new website',
+  description = 'Initialization placeholder layout',
+} = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <a href="#main" class="skip-to-content">Skip to main content</a>
+    <Navbar />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  :global(body) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 12px;
+    padding: 0.5rem 0.75rem;
+    background: var(--color-surface-alt);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: top 0.2s ease;
+  }
+
+  .skip-to-content:focus {
+    top: 12px;
+  }
+
+  main {
+    width: min(960px, 100%);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg);
+  }
 </style>

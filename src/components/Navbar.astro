@@ -1,0 +1,54 @@
+---
+import navigation from '../config/navigation.json';
+
+interface NavItem {
+  label: string;
+  href: string;
+  kind?: string;
+  children?: NavItem[];
+}
+
+const items = (navigation.items as NavItem[]) || [];
+const logoSrc = (navigation.logoSrc as string) || '/favicon.svg';
+const cta = navigation.cta as { label: string; href: string } | undefined;
+---
+
+<nav class="navbar" aria-label="Primary">
+  <a class="brand" href="/">
+    <img src={logoSrc} alt="Uptalent" width="28" height="28" />
+    <span class="brand-name">Uptalent</span>
+  </a>
+  <button class="menu-btn" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">
+    ☰
+  </button>
+  <ul class="links">
+    {items.map((item) => (
+      <li><a href={item.href}>{item.label}</a></li>
+    ))}
+  </ul>
+  {cta && <a class="cta" href={cta.href}>{cta.label}</a>}
+</nav>
+
+<style>
+  .navbar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); }
+  .brand { display: inline-flex; align-items: center; gap: var(--space-sm); text-decoration: none; }
+  .brand-name { font-weight: 600; }
+  .links { display: flex; gap: var(--space-lg); list-style: none; margin: 0; padding: 0; }
+  .links a { text-decoration: none; color: var(--color-text); }
+  .links a:hover { color: var(--color-accent); }
+  .menu-btn { display: none; }
+  .cta {
+    text-decoration: none;
+    background: var(--color-accent);
+    color: #081018;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+  }
+  @media (max-width: 720px) {
+    .menu-btn { display: inline-block; background: transparent; color: var(--color-text); border: 1px solid var(--color-border); padding: 0.25rem 0.5rem; border-radius: var(--radius-sm); }
+    .links { display: none; }
+    :global(body.nav-open) .links { display: grid; gap: var(--space-sm); position: absolute; top: 56px; left: 16px; right: 16px; background: var(--color-surface-alt); border: 1px solid var(--color-border); padding: var(--space-md); border-radius: var(--radius-md); }
+  }
+</style>
+
