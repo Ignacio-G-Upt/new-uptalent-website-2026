@@ -34,6 +34,16 @@ jobs:
       - name: Nebius ping (connectivity/auth)
         run: node scripts/nebius-ping.mjs
         continue-on-error: true
+      - name: Start static server
+        run: npx serve -s dist -l 5000 &
+      - name: Wait for server
+        run: npx wait-on http://localhost:5000
+      - name: Lighthouse (collect)
+        run: npx lhci collect --url=http://localhost:5000/ --numberOfRuns=1 --settings.preset=desktop
+        continue-on-error: true
+      - name: Accessibility (pa11y)
+        run: npx pa11y-ci http://localhost:5000/
+        continue-on-error: true
       - name: Visual validator (stub)
         run: echo "visual-validator gate pending Nebius integration"
       - name: Accessibility check (stub)
