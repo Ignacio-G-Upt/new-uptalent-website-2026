@@ -1,13 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout
   title="Uptalent 2026 new website — initialization"
   description="Setup placeholder while core systems are configured"
 >
+  <Hero
+    eyebrow="Status"
+    h1="Initialization in progress"
+    subcopy="Scaffolding and gates are set. Visuals and content wire-in come next."
+    primaryCta={{ label: 'View Manifest', href: '/PROJECT_MANIFEST.md' }}
+  />
   <section class="status">
-    <h1>Initialization in progress</h1>
     <p>
       Astro scaffolding, MDX support, and content collections are configured. Page content and
       visual sections will be added only after the owner provides the approved `.md` files and the
