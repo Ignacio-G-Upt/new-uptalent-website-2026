@@ -1,5 +1,7 @@
 # Uptalent 2026 New Website (Astro)
 
+![CI](https://github.com/Ignacio-G-Upt/new-uptalent-website-2026/actions/workflows/ci.yml/badge.svg)
+
 This repository hosts the 2026 Uptalent marketing website, built with Astro and structured for
 section-by-section approvals. Initialization covers tooling, MDX/content collections, brand asset
 ingest, and shared tokens before any page content is integrated.
